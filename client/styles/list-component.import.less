@@ -1,0 +1,123 @@
+#list-component {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+
+  input.list-header {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    background-color: transparent;
+    border: 1px dashed transparent;
+    transition: border 0.3s ease;
+    margin-bottom: 20px;
+
+    &:hover, &:focus {
+      border: 1px dashed #e4e4e4;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .task-board {
+    font-size: 1.8rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+
+    .task-list {
+
+      .task-item {
+
+        border-bottom: 1px solid #EDEDED;
+        transition: color 0.2s ease;
+
+        .checkbox {
+
+          text-align: center;
+          width: 42px;
+          height: 40px;
+          margin: auto 0;
+          border: none;
+          -webkit-appearance: none;
+          appearance: none;
+          cursor: pointer;
+
+          &::after {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>')
+          }
+
+          &:checked::after {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>')
+          }
+        }
+
+        .title, .title-input {
+          padding: 6px 0 6px 3px;
+        }
+
+        .title-input {
+          width: 100%;
+          transition: border 0.3s ease;
+          border: 1px dashed #e4e4e4;
+        }
+
+
+        .iteration {
+          color: #A7A7A7;
+        }
+
+        .toggle-archive {
+          cursor: pointer;
+          color: #727272;
+          font-size: 2.7rem;
+          height: 40px;
+
+          &:hover {
+            color: darken(#727272, 20);
+          }
+        }
+
+        &.done {
+          color: #cdcdcd;
+        }
+      }
+    }
+  }
+
+
+  form.new-task {
+
+    position: relative;
+
+    &::after {
+      content: '+';
+      position: absolute;
+      left: 22px;
+      top: 5px;
+      font-size: 2.6rem;
+      color: #B1B3B3;
+    }
+
+    .title {
+      width: 100%;
+      border: none;
+      padding: 13px 5px 13px 58px;
+      font-size: 1.8rem;
+    }
+  }
+
+
+  .footer {
+    a {
+      color: #727272;
+      text-decoration: none;
+
+      &:hover {
+        color: darken(#727272, 20);
+      }
+    }
+  }
+
+}
