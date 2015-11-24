@@ -18,6 +18,16 @@ ListPage = React.createClass({
 
 
   render() {
+    let title = 'List';
+    if(this.data.list) {
+      title = this.data.list.title;
+    }
+
+    DocHead.setTitle(title);
+    DocHead.addMeta({name: 'og:title', content: title});
+    DocHead.addMeta({name: 'og:description', content: 'Repeated tasks made easy.'});
+
+
     return (
       <div className="container">
         <div className="row">
