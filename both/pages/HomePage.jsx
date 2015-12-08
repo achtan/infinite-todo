@@ -13,6 +13,9 @@ HomePage = React.createClass({
           <h1>Infinite Todo</h1>
           <h3>Repeated tasks made easy</h3>
           <div className="btn btn-primary btn-lg m-t" onClick={this.handleCreateList}>Create todo list</div>
+          <div className="m-t-lg">
+            <TasksChart />
+          </div>
         </div>
       </div>
     )

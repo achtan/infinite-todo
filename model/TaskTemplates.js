@@ -31,6 +31,14 @@ TaskTemplate = Astro.Class({
     archived: {
       type: 'boolean',
       default: false
+    },
+
+    createdAt: {
+      type: 'date',
+      index: 1,
+      default() {
+        return new Date()
+      }
     }
   },
 

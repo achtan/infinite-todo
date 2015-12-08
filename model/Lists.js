@@ -9,7 +9,16 @@ List = Astro.Class({
       default() {
         return 'My ' + superlative() + ' list';
       }
+    },
+
+    createdAt: {
+      type: 'date',
+      index: 1,
+      default() {
+        return new Date()
+      }
     }
+
   },
 
   methods: {

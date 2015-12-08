@@ -22,6 +22,7 @@ flemay:less-autoprefixer
 # lib
 react
 meteorhacks:ssr
+meteorhacks:aggregate
 momentjs:moment
 underscore
 underscorestring:underscore.string
@@ -36,6 +37,9 @@ kadira:react-layout
 
 # collections
 jagi:astronomy
+
+# plugins
+maazalik:highcharts
 
 # SEO
 kadira:dochead

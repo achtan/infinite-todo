@@ -25,7 +25,7 @@ ListComponent = React.createClass({
         </div>
         <div className="m-y-md m-x footer clearfix">
           <div className="pull-left">
-            <a href={pathFor('stats', list)} title="Stats"><i className="fa fa-pie-chart" /></a>
+            <a href={pathFor('listStats', list)} title="Stats"><i className="fa fa-pie-chart" /></a>
           </div>
           <div className="pull-right">
             <a onClick={this.toggleSettings} href="#" title="Setting">
